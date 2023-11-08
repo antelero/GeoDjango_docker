@@ -1,6 +1,6 @@
 # GeoDjango Docker como Entorno de Desarrollo
 
-Esta guis esta basada en el siguiente documento: 
+Esta guis esta basada en el siguiente documento: https://github.com/docker/awesome-compose/tree/e6b1d2755f2f72a363fc346e52dce10cace846c8/official-documentation-samples/django
 
 # Quickstart: Compose and Django
 

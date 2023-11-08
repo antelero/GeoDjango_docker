@@ -1,5 +1,7 @@
 # GeoDjango Docker como Entorno de Desarrollo
 
+Esta guis esta basada en el siguiente documento: 
+
 # Quickstart: Compose and Django
 
 This quick-start guide demonstrates how to use Docker Compose to set up and run a simple Django/PostgreSQL app. Before starting,

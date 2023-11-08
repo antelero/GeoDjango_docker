@@ -3,7 +3,7 @@
 Esta guia esta basada en el [siguiente documento](https://github.com/docker/awesome-compose/tree/e6b1d2755f2f72a363fc346e52dce10cace846c8/official-documentation-samples/django) de Django. 
 
 
-# Quickstart: Compose and Django
+# Quickstart: Docker Compose y GeoDjango
 
 This quick-start guide demonstrates how to use Docker Compose to set up and run a simple Django/PostgreSQL app. Before starting,
 [install Compose](https://docs.docker.com/compose/install/).

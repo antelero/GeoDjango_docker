@@ -78,7 +78,8 @@ and a `docker-compose.yml` file. (You can use either a `.yml` or `.yaml` extensi
 6. Add the required software in the file.
 
     ```python
-    Django>=3.0,<4.0
+    Django==4.2
+    django-leaflet
     psycopg2>=2.8
     ```
 
@@ -97,31 +98,31 @@ and a `docker-compose.yml` file. (You can use either a `.yml` or `.yaml` extensi
 9. Add the following configuration to the file.
 
    ```yaml
-   services:
-     db:   services:
-      db:
-        image: postgres            
-        environment:
-          - POSTGRES_NAME=postgres
-          - POSTGRES_USER=postgres
-          - POSTGRES_PASSWORD=postgres
-        volumes:
-          - ./data/db:/var/lib/postgresql/data
+       services:
+         db:   services:
+          db:
+            image: postgres            
+            environment:
+              - POSTGRES_NAME=postgres
+              - POSTGRES_USER=postgres
+              - POSTGRES_PASSWORD=postgres
+            volumes:
+              - ./data/db:/var/lib/postgresql/data
+              
+          web:
+            build: .
+            command: python manage.py runserver 0.0.0.0:8000
+            volumes:
+              - .:/code
+            environment:
+              - POSTGRES_NAME=postgres
+              - POSTGRES_USER=postgres
+              - POSTGRES_PASSWORD=postgres
+            ports:
+              - "8000:8000"
+            depends_on:
+              - db
           
-      web:
-        build: .
-        command: python manage.py runserver 0.0.0.0:8000
-        volumes:
-          - .:/code
-        environment:
-          - POSTGRES_NAME=postgres
-          - POSTGRES_USER=postgres
-          - POSTGRES_PASSWORD=postgres
-        ports:
-          - "8000:8000"
-        depends_on:
-          - db
-      
    ```
 
    This file defines two services: The `db` service and the `web` service.

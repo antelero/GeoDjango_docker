@@ -27,9 +27,11 @@ and a `docker-compose.yml` file. (You can use either a `.yml` or `.yaml` extensi
 3. Add the following content to the `Dockerfile`.
 
    ```dockerfile
-   
-     # https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/django/#define-the-project-components
-     # FROM directive instructing base image to build upon
+    #################################################################################################################################
+    # https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/django/#define-the-project-components    #
+    #################################################################################################################################
+    
+    # FROM directive instructing base image to build upon
     FROM python:3.10.13-alpine3.18
     
     ENV PYTHONDONTWRITEBYTECODE=1

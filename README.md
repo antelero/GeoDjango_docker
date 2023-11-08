@@ -1,4 +1,4 @@
-# GeoDjango Docker cmo Entorno de Desarrollo
+# GeoDjango Docker como Entorno de Desarrollo
 
 # Quickstart: Compose and Django
 
